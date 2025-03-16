@@ -1,0 +1,609 @@
+
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+ 
+  background-color: black; /* Darker background for better contrast */
+  backdrop-filter: blur(10px); /* Blur effect for the background */
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar:hover {
+  background-color: rgba(0, 0, 0, 1); /* Darken when hovered */
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-family: 'Mina', sans-serif; /* Fancy Bangla Font */
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #00bcd4; /* Change color on hover */
+}
+
+.navbar-nav {
+  font-size: 1rem;
+}
+
+.nav-item .nav-link {
+  color: black;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-item .nav-link:hover {
+  color: #00bcd4; /* Highlight on hover */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav .nav-item {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  .nav-item .nav-link {
+    font-size: 1rem;
+  }
+}
+
+/* Exam Section Styles */
+#exam-section {
+  background-color: #fff;
+  padding: 50px 0;
+  color: #333;
+}
+
+.exam-section .container {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-family: 'Mina', sans-serif;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.exam-card {
+  background-color: #f5f5f5;
+  padding: 30px;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.exam-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.exam-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-family: 'Mina', sans-serif;
+}
+
+.exam-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.exam-card span {
+  color: #2196F3;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #1976D2;
+}
+
+@media (max-width: 767px) {
+  .exam-card {
+    margin-bottom: 30px;
+  }
+}
+
+/* Exam Tips Section Styles */
+#exam-tips {
+  background-color: #fafafa;
+  padding: 50px 0;
+  color: #333;
+}
+
+.exam-tips-section .container {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-family: 'Mina', sans-serif;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.tip-card {
+  background-color: #fff;
+  padding: 30px;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tip-card i {
+  font-size: 3rem;
+  color: #2196F3;
+  margin-bottom: 20px;
+}
+
+.tip-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-family: 'Mina', sans-serif;
+}
+
+.tip-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+@media (max-width: 767px) {
+  .tip-card {
+    margin-bottom: 30px;
+  }
+}
+/* Hero Section Styles */
+#hero-section {
+
+  background-size: 300% 300%;
+  color: black;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+}
+
+@keyframes gradientAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero-section .container {
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-family: 'Mina', sans-serif;
+  margin-bottom: 20px;
+}
+
+.hero-title span {
+  font-weight: bold;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.line-animation {
+  width: 80px;
+  height: 3px;
+  background-color: black;
+  margin: 20px 0;
+  position: relative;
+  animation: lineAnim 2s infinite;
+}
+
+@keyframes lineAnim {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 80px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.cta-btn {
+  font-size: 1.2rem;
+  padding: 12px 40px;
+  background-color: #fff;
+  color: #2196F3;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #1976D2;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-description {
+    font-size: 1rem;
+  }
+  .cta-btn {
+    font-size: 1rem;
+  }
+}
+
+
+/* General Styles */
+#why-us {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+  color: #333;
+}
+
+.why-us-section .container {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-family: 'Mina', sans-serif;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.feature-card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card i {
+  font-size: 3rem;
+  color: #2196F3;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-family: 'Mina', sans-serif;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+@media (max-width: 767px) {
+  .feature-card {
+    margin-bottom: 30px;
+  }
+}
+
+.dnone{
+    display:none;
+}
+/* Scroll to Top Button Styling */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px; /* Distance from the bottom */
+  right: 30px; /* Distance from the right */
+  background-color: #3498db; /* Button color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem; /* Arrow size */
+  padding: 10px 16px;
+  cursor: pointer;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially hidden */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for visual effect */
+}
+
+.scroll-top-btn:hover {
+  background-color: #2980b9; /* Darker shade on hover */
+}
+
+.scroll-top-btn.show {
+  opacity: 1; /* Make button visible */
+  visibility: visible; /* Make button visible */
+}
+
+.scroll-top-btn:focus {
+  outline: none; /* Remove outline when the button is clicked */
+}
+
+/* Optional: Adding animation when the button appears */
+@keyframes slideIn {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.scroll-top-btn.show {
+  animation: slideIn 0.5s ease-out; /* Apply the animation when the button appears */
+}
+
+/* Footer Section Styling */
+.footer-section {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 40px 0;
+  
+  z-index: 10;
+}
+
+.footer-section h3,
+.footer-section h5 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer-section .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section .col-md-4 {
+  padding: 10px;
+}
+
+.footer-section .social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-section .social-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section .social-icon:hover {
+  color: #3498db;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #3498db;
+}
+
+.footer-section .text-center {
+  margin-top: 30px;
+}
+
+.footer-section .text-center p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-section .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section .col-md-4 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-section .social-links {
+    justify-content: center;
+  }
+}
+/* Remove Bootstrap's default hamburger icon */
+.navbar-toggler .navbar-toggler-icon {
+    background-image: none !important;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    
+    position: relative;
+    transition: 0.3s;
+}
+
+
+/* Create top and bottom lines for the hamburger */
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+}
+
+/* Position the top and bottom lines */
+.navbar-toggler .navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+    top: 8px;
+}
+
+/* When toggled (X icon) */
+.navbar-toggler.open .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-toggler.open .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.navbar-toggler.open .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.exam-section {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.exam-card {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.exam-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.exam-card p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.exam-card .download-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.exam-card .download-btn:hover {
+    background-color: #45a049;
+}
+
+#noticeModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+}
+
+
+
+  
