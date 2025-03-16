@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উল্লেখ - Educational Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&family=Alkatre:wght@400;700&family=Hind+Siliguri:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+  <div class="container">
+    <a class="navbar-brand" href="#hero-section">
+      <span class="site-name">উল্লেখ</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggle"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#hero-section">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about-us">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#why-us">Why Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#exam-tips">Exam Tips</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Hero Section -->
+<header id="hero-section" class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <br><br>
+      <h1 class="hero-title">Welcome to <span>উল্লেখ</span></h1>
+      <p class="hero-description">An educational platform tailored to help HSC Science students excel with comprehensive resources, tips, and support.</p>      
+      <div class="line-animation"></div>
+      <a href="#exam-tips" class="cta-btn">Learn More</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.querySelector('.navbar-toggler');
+    const icon = toggleButton.querySelector('.navbar-toggle');
+
+    toggleButton.addEventListener('click', function () {
+      // Toggle between hamburger and close icon
+      icon.classList.toggle('open');
+    });
+  });
+</script>
+<style>
+    .navbar-toggler {
+    border: none !important;  /* Removes the border */
+    outline: none !important; /* Removes the focus outline */
+    box-shadow: none !important; /* Removes any shadow */
+}
+
+.navbar-toggler-icon {
+    display: none !important; /* Completely hides the default icon */
+}
+    .navbar-toggler-icon {
+    background-image: none !important; /* Removes Bootstrap default icon */
+}
+  .navbar-toggle {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    position: relative;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .navbar-toggle:before,
+  .navbar-toggle:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+  }
+
+  .navbar-toggle:before {
+    top: -8px;
+  }
+
+  .navbar-toggle:after {
+    top: 8px;
+  }
+
+  .navbar-toggle.open {
+    background-color: transparent;
+  }
+
+  .navbar-toggle.open:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .navbar-toggle.open:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+</style>
+
+
+<style>
+        .notice {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .close-notice {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .close-notice:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+
+
+
+
+  <style>
+        /* Modal Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+        .popup.show {
+            display: block;
+            opacity: 1;
+            animation: fadeInZoom 0.5s ease-in-out;
+        }
+        @keyframes fadeInZoom {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        }
+        .overlay-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255, 0.8);
+            backdrop-filter: blur(3px);
+            display: none;
+            z-index: 999;
+        }
+        .overlay-bg.show {
+            display: block;
+        }
+        .close-btn {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+
+
+    <!-- Modal -->
+    <div id="overlayBackground" class="overlay-bg"></div>
+    <div id="popupModal" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2 id="popupTitle"></h2>
+        <p id="popupBody"></p>
+    </div>
+
+    <script>
+        function showPopup(title, body) {
+            document.getElementById("popupTitle").innerText = title;
+            document.getElementById("popupBody").innerText = body;
+            document.getElementById("popupModal").classList.add("show");
+            document.getElementById("overlayBackground").classList.add("show");
+        }
+
+        function closePopup() {
+            document.getElementById("popupModal").classList.remove("show");
+            document.getElementById("overlayBackground").classList.remove("show");
+        }
+
+        function addPopupNotice(condition, title, body, extra) {
+            switch (condition) {
+                case "page-load":
+                    window.onload = () => showPopup(title, body);
+                    break;
+                case "before-refresh":
+                    window.addEventListener("beforeunload", (e) => {
+                        e.preventDefault();
+                        showPopup(title, body);
+                    });
+                    break;
+                case "scroll-bottom":
+                    window.addEventListener("scroll", () => {
+                        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) showPopup(title, body);
+                    });
+                    break;
+                case "scroll-up":
+                    let lastScroll = window.scrollY;
+                    window.addEventListener("scroll", () => {
+                        if (window.scrollY < lastScroll) showPopup(title, body);
+                        lastScroll = window.scrollY;
+                    });
+                    break;
+                case "scroll-section":
+                    document.getElementById(extra).addEventListener("mouseenter", () => showPopup(title, body));
+                    break;
+                case "darkmode":
+                    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+                        if (e.matches) showPopup(title, body);
+                    });
+                    break;
+                case "idle":
+                    let idleTimer;
+                    function resetTimer() {
+                        clearTimeout(idleTimer);
+                        idleTimer = setTimeout(() => showPopup(title, body), extra * 1000);
+                    }
+                    document.addEventListener("mousemove", resetTimer);
+                    document.addEventListener("keydown", resetTimer);
+                    resetTimer();
+                    break;
+                case "click":
+                    document.addEventListener("click", () => showPopup(title, body));
+                    break;
+                case "dblclick":
+                    document.addEventListener("dblclick", () => showPopup(title, body));
+                    break;
+                case "rightclick":
+                    document.addEventListener("contextmenu", (e) => { 
+                        e.preventDefault(); 
+                        showPopup(title, body); 
+                    });
+                    break;
+                case "keydown":
+                    document.addEventListener("keydown", (e) => {
+                        if (e.key === extra) showPopup(title, body);
+                    });
+                    break;
+                case "copy":
+                    document.addEventListener("copy", () => showPopup(title, body));
+                    break;
+                case "cut":
+                    document.addEventListener("cut", () => showPopup(title, body));
+                    break;
+                case "paste":
+                    document.addEventListener("paste", () => showPopup(title, body));
+                    break;
+                case "network-off":
+                    window.addEventListener("offline", () => showPopup(title, body));
+                    break;
+                case "network-on":
+                    window.addEventListener("online", () => showPopup(title, body));
+                    break;
+                case "battery-low":
+                    navigator.getBattery().then((battery) => {
+                        if (battery.level < 0.2) showPopup(title, body);
+                    });
+                    break;
+                case "tab-switch":
+                    document.addEventListener("visibilitychange", () => {
+                        if (!document.hidden) showPopup(title, body);
+                    });
+                    break;
+                case "device-orientation":
+                    window.addEventListener("orientationchange", () => showPopup(title, body));
+                    break;
+                case "window-resize":
+                    window.addEventListener("resize", () => showPopup(title, body));
+                    break;
+                case "specific-time":
+                    setInterval(() => {
+                        const now = new Date();
+                        const formattedTime = `${now.getHours()}:${now.getMinutes()}`;
+                        if (formattedTime === extra) showPopup(title, body);
+                    }, 60000);
+                    break;
+                case "first-visit":
+                    if (!localStorage.getItem("visited")) {
+                        showPopup(title, body);
+                        localStorage.setItem("visited", "true");
+                    }
+                    break;
+                case "returning-visit":
+                    if (localStorage.getItem("visited")) showPopup(title, body);
+                    break;
+            }
+        }
+
+        // Example Usage
+        addPopupNotice("page-load", "Welcome!", "Thanks for visiting our website!");
+        addPopupNotice("scroll-bottom", "End of Page!", "You reached the bottom.");
+        addPopupNotice("darkmode", "Dark Mode!", "You switched to dark mode.");
+        addPopupNotice("offline", "Are you still there?", "You’ve been inactive for 30 seconds.", 3);
+        addPopupNotice("network-off", "No Internet!", "You lost connection!");
+        addPopupNotice("network-on", "Internet Restored!", "You're back online!");
+        addPopupNotice("battery-low", "Battery Warning!", "Your battery is below 20%.");
+        addPopupNotice("specific-time", "Reminder!", "It's 10:15 AM!", "09:18");
+        addPopupNotice("tab-switch", "Welcome Back!", "You switched back to this tab.");
+        addPopupNotice("first-visit", "First Time Here?", "Welcome to our website!");
+        addPopupNotice("returning-visit", "Welcome Back!", "Glad to see you again!");
+        addPopupNotice("every-visit", "Hello Again!", "Hello again! We appreciate your visit.");
+    </script>
+    
+
+
+
+
+
+
+    <div id="notices-container"></div> <!-- Container for dynamic notices -->
+
+    <script>
+        // Function to add a notice to the page
+        function addNotice(message) {
+            const noticeContainer = document.createElement('div');
+            noticeContainer.classList.add('notice');
+            noticeContainer.innerHTML = `<p>${message}</p><button class="close-notice" onclick="closeNotice(this)">Close</button>`;
+            document.getElementById('notices-container').appendChild(noticeContainer);
+        }
+
+        // Function to close the notice
+        function closeNotice(button) {
+            const notice = button.parentElement;
+            notice.style.display = 'none';
+        }
+
+        // Function to trigger notices after specified intervals
+        function startIntervalNotices() {
+            // Immediate notice after page load
+          
+
+            // Trigger a notice 7 minutes after the page load
+            setTimeout(() => {
+                addNotice("Reminder: 7 minutes have passed since the page loaded.");
+            }, 7 * 60 * 1000); // 7 minutes
+
+            // Trigger a notice every 5 seconds
+            setInterval(() => {
+                addNotice("This is a notice triggered every 5 seconds.");
+            }, 5000); // 5 seconds
+
+            // Trigger a notice every 10 minutes
+            setInterval(() => {
+                addNotice("This is a notice triggered every 10 minutes.");
+            }, 10 * 60 * 1000); // 10 minutes
+
+            // Trigger a notice every hour
+            setInterval(() => {
+                addNotice("This is a notice triggered every hour.");
+            }, 60 * 60 * 1000); // 1 hour
+
+            // Trigger a notice every time the minute is 30 (e.g., 12:30, 1:30, etc.)
+            setInterval(() => {
+                const currentTime = new Date();
+                if (currentTime.getMinutes() === 30) {
+                    addNotice("It's 30 minutes past the hour!");
+                }
+            }, 60000); // Check every minute
+        }
+
+        // Call the startIntervalNotices function when the page loads
+        window.onload = function() {
+            startIntervalNotices(); // This will start all the interval notices
+        };
+    </script>
+<!-- Button trigger modal -->
+<button type="button" class="btn dnone btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="modalBtn">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Notice:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div style="background-color: #f8d7da; color: #721c24; padding: 15px; border-radius: 5px; border: 1px solid #f5c6cb;">
+   <div style="background-color: #f8d7da; color: #721c24; padding: 15px; border-radius: 5px; border: 1px solid #f5c6cb;">
+    <p>This is an important message. Please take immediate action to comply with the necessary requirements. Your attention to this matter is crucial. Failure to do so may result in serious consequences. Kindly address this as soon as possible.</p>
+</div>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    // Function to close the modal popup
+function closeModal() {
+  document.getElementById('noticeModal').style.display = 'none';
+}
+</script>
+
+<!-- Exam Section -->
+<section id="exam-section" class="exam-section">
+  <div class="container"><br><br>
+    <h2 class="section-heading">Upcoming Exams</h2>
+    <div id="exam-cards-container" class="row">
+      <!-- Exam cards will be dynamically inserted here -->
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Notices -->
+<div class="modal" id="noticeModal">
+  <div class="modal-content">
+    <h4>Important Notice</h4>
+    <p id="notice-message"></p>
+    <button class="close-btn" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- Exam Tips Section -->
+<section id="exam-tips" class="exam-tips-section">
+  <div class="container">
+    <h2 class="section-heading">Top Exam Tips for Success</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="tip-card">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Plan Your Study Time</h3>
+          <p>Break down your study schedule into manageable chunks. Prioritize topics based on exam dates and difficulty level. Create a timetable and stick to it!</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="tip-card">
+          <i class="fas fa-book-open"></i>
+          <h3>Understand Key Concepts</h3>
+          <p>Don’t just memorize—focus on understanding the concepts. The deeper your understanding, the easier it is to solve complex problems on exam day.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="tip-card">
+          <i class="fas fa-pencil-alt"></i>
+          <h3>Practice with Past Papers</h3>
+          <p>Reviewing past exam papers helps you become familiar with the question format and time management. It also boosts your confidence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us Section -->
+<section id="why-us" class="why-us-section">
+  <div class="container">
+    <h2 class="section-heading">Why Us?</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="feature-card">
+          <i class="fas fa-book"></i>
+          <h3>Quality Study Material</h3>
+          <p>Our study materials are designed by experts to provide the most comprehensive and up-to-date content to help you excel.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <h3>Experienced Tutors</h3>
+          <p>Our tutors are highly qualified and experienced in their respective fields, ensuring the best learning experience for you.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <i class="fas fa-users"></i>
+          <h3>Community Support</h3>
+          <p>Join our vibrant student community to discuss, share, and learn with peers who are equally passionate about their studies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer id="footer-section" class="footer-section">
+  <div class="container">
+    <div class="row">
+      <!-- Logo and Description -->
+      <div class="col-md-4">
+        <h3>Educational Platform</h3>
+        <p>Providing high-quality education resources for students to excel and achieve their goals.</p>
+      </div>
+      
+      <!-- Useful Links -->
+      <div class="col-md-4">
+        <h5>Useful Links</h5>
+        <ul>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact-us">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Social Media Links -->
+      <div class="col-md-4">
+        <h5>Follow Us</h5>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-4">
+      <p> স্বত্ব © উল্লেখ কর্তৃক সর্বস্বত্ব সংরক্ষিত</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" class="scroll-top-btn">
+  ↑
+</button>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Custom JavaScript -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
